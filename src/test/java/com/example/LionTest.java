@@ -6,6 +6,8 @@ import org.junit.Test;
 
 import java.util.List;
 
+import static org.junit.Assert.*;
+
 public class LionTest {
     //Сделать аннотацию before и вынести туда создание lion
     IFeline feline;
@@ -17,7 +19,7 @@ public class LionTest {
 
         boolean actualResult = lion.doesHaveMane();
 
-        Assert.assertEquals("Incorrect result", expectedResult, actualResult);
+        assertEquals("Incorrect result", expectedResult, actualResult);
     }
 
     @Test
@@ -27,7 +29,7 @@ public class LionTest {
 
         boolean actualResult = lion.doesHaveMane();
 
-        Assert.assertEquals("Incorrect result", expectedResult, actualResult);
+        assertEquals("Incorrect result", expectedResult, actualResult);
     }
 
     @Test(expected = Exception.class)
@@ -47,7 +49,7 @@ public class LionTest {
             exception = ex;
         }
 
-          Assert.assertEquals("Используйте допустимые значения пола животного - самец или самка", exception.getMessage());
+          assertEquals("Используйте допустимые значения пола животного - самец или самка", exception.getMessage());
       }
 
 

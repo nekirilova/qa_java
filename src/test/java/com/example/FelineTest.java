@@ -5,6 +5,8 @@ import org.junit.Test;
 
 import java.util.List;
 
+import static org.junit.Assert.*;
+
 public class FelineTest {
     @Test
     public void getFamilyReturnsCorrectValue() {
@@ -13,7 +15,7 @@ public class FelineTest {
 
         String actualFamily = feline.getFamily();
 
-        Assert.assertEquals("Incorrect family", expectedFamily, actualFamily);
+        assertEquals("Incorrect family", expectedFamily, actualFamily);
     }
 
     @Test
@@ -23,7 +25,7 @@ public class FelineTest {
 
         List<String> actualList = feline.eatMeat();
 
-        Assert.assertEquals("Incorrect list", expectedList, actualList);
+        assertEquals("Incorrect list", expectedList, actualList);
     }
 
     @Test
@@ -33,7 +35,7 @@ public class FelineTest {
 
         int actualNumberOfKittens = feline.getKittens(5);
 
-        Assert.assertEquals("Incorrect number of Kittens", expectedNumberOfKittens, actualNumberOfKittens);
+        assertEquals("Incorrect number of Kittens", expectedNumberOfKittens, actualNumberOfKittens);
     }
 
     @Test
@@ -43,6 +45,6 @@ public class FelineTest {
 
         int actualNumberOfKittens = feline.getKittens();
 
-        Assert.assertEquals("Incorrect number of Kittens", expectedNumberOfKittens, actualNumberOfKittens);
+        assertEquals("Incorrect number of Kittens", expectedNumberOfKittens, actualNumberOfKittens);
     }
 }
