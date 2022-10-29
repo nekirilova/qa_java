@@ -47,4 +47,14 @@ public class LionTest {
           Assert.assertEquals("Используйте допустимые значения пола животного - самец или самка", exception.getMessage());
       }
 
+      @Test
+    public void getKittensReturnsOneKitten() throws Exception {
+        Lion lion = new Lion(feline, "Самец");
+        int expectedNumberOfKittens = 1;
+
+        int actualNumberOfKittens = lion.getKittens();
+
+        Assert.assertEquals("Incorrect number of kittens", expectedNumberOfKittens, actualNumberOfKittens);
+
+      }
 }
