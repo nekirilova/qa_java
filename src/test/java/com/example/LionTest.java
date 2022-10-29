@@ -1,7 +1,10 @@
 package com.example;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
+
+import java.util.List;
 
 public class LionTest {
     //Сделать аннотацию before и вынести туда создание lion
@@ -47,14 +50,5 @@ public class LionTest {
           Assert.assertEquals("Используйте допустимые значения пола животного - самец или самка", exception.getMessage());
       }
 
-      @Test
-    public void getKittensReturnsOneKitten() throws Exception {
-        Lion lion = new Lion(feline, "Самец");
-        int expectedNumberOfKittens = 1;
 
-        int actualNumberOfKittens = lion.getKittens();
-
-        Assert.assertEquals("Incorrect number of kittens", expectedNumberOfKittens, actualNumberOfKittens);
-
-      }
 }
