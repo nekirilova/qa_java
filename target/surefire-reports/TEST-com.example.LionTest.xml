@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="12" failures="0" name="com.example.LionTest" time="0.049" errors="0" skipped="0">
+<testsuite tests="10" failures="0" name="com.example.LionTest" time="0.038" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2022.2"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -60,16 +60,14 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.example.LionTest" name="getKittensReturnsCorrectValue[0]" time="0.037"/>
-  <testcase classname="com.example.LionTest" name="getFoodReturnsPredatorFoodList[0]" time="0.002"/>
-  <testcase classname="com.example.LionTest" name="doesHaveManeSetMaleReturnsTrue[0]" time="0.001"/>
-  <testcase classname="com.example.LionTest" name="doesHaveManeSetFemaleReturnsFalse[0]" time="0.001"/>
-  <testcase classname="com.example.LionTest" name="constructorThrowsExceptionOnUnsupportedSex[0]" time="0.005"/>
-  <testcase classname="com.example.LionTest" name="constructorExceptionTextIsCorrect[0]" time="0"/>
-  <testcase classname="com.example.LionTest" name="getKittensReturnsCorrectValue[1]" time="0"/>
-  <testcase classname="com.example.LionTest" name="getFoodReturnsPredatorFoodList[1]" time="0.003"/>
-  <testcase classname="com.example.LionTest" name="doesHaveManeSetMaleReturnsTrue[1]" time="0"/>
-  <testcase classname="com.example.LionTest" name="doesHaveManeSetFemaleReturnsFalse[1]" time="0"/>
+  <testcase classname="com.example.LionTest" name="getKittensReturnsCorrectValue[0]" time="0.03"/>
+  <testcase classname="com.example.LionTest" name="getFoodReturnsPredatorFoodList[0]" time="0.001"/>
+  <testcase classname="com.example.LionTest" name="doesHaveManeReturnsCorrectValue[0]" time="0"/>
+  <testcase classname="com.example.LionTest" name="constructorThrowsExceptionOnUnsupportedSex[0]" time="0.001"/>
+  <testcase classname="com.example.LionTest" name="constructorExceptionTextIsCorrect[0]" time="0.001"/>
+  <testcase classname="com.example.LionTest" name="getKittensReturnsCorrectValue[1]" time="0.002"/>
+  <testcase classname="com.example.LionTest" name="getFoodReturnsPredatorFoodList[1]" time="0.002"/>
+  <testcase classname="com.example.LionTest" name="doesHaveManeReturnsCorrectValue[1]" time="0"/>
   <testcase classname="com.example.LionTest" name="constructorThrowsExceptionOnUnsupportedSex[1]" time="0"/>
-  <testcase classname="com.example.LionTest" name="constructorExceptionTextIsCorrect[1]" time="0"/>
+  <testcase classname="com.example.LionTest" name="constructorExceptionTextIsCorrect[1]" time="0.001"/>
 </testsuite>

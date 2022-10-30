@@ -15,17 +15,15 @@ import static org.junit.Assert.*;
 public class LionTest {
 
     private final String sex;//поле для конструктора
-
-    private final boolean hasMane;
-
+    private final boolean hasMane;//поле для конструктора
+//конструктор для тестовых данных
     public LionTest(String sex, boolean hasMane) {
         this.sex = sex;
-
         this.hasMane = hasMane;
     }
 
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters //создаем многомерный объект с тестовыми данными для метода doesHaveMane();
     public static Object[][] getHasMane() {
         Parameters parameters = new Parameters();
         return new Object[][] {
@@ -34,7 +32,7 @@ public class LionTest {
         };
     }
 
-    @Before
+    @Before//подключаем мок через метод
     public void init() {
         MockitoAnnotations.openMocks(this);
     }
@@ -43,7 +41,7 @@ public class LionTest {
     private IFeline feline;
 
 
-    @Test
+    @Test//тестируем метод getKittens по умолчанию
     public void getKittensReturnsCorrectValue() throws Exception {
         Lion lion = new Lion(feline, "Самка");
         Mockito.when(feline.getKittens()).thenReturn(1);
@@ -52,8 +50,8 @@ public class LionTest {
         int actualNumberOfKittens = lion.getKittens();
         assertEquals("Incorrect number of kittens", expectedNumberOfKittens, actualNumberOfKittens);
     }
-    @Test
-    public void doesHaveManeSetMaleReturnsTrue() throws Exception {
+    @Test//тестируем метод doesHaveMane() в зависимости от пола
+    public void doesHaveManeReturnsCorrectValue() throws Exception {
         Lion lion = new Lion(feline, sex);
         boolean expectedResult = hasMane;
 
@@ -62,10 +60,10 @@ public class LionTest {
         assertEquals("Incorrect result", expectedResult, actualResult);
     }
 
-    @Test
+    @Test//проверяем, что метод getFood возвращает список еды для хищника
     public void getFoodReturnsPredatorFoodList() throws Exception {
-        Lion lion = new Lion(feline, sex);
         Parameters parameters = new Parameters();
+        Lion lion = new Lion(feline, parameters.getFEMALE_SEX());
         Mockito.when(feline.eatMeat()).thenReturn(parameters.getPREDATOR_FOOD_LIST());
         List<String> expectedFoodList = parameters.getPREDATOR_FOOD_LIST();
 
@@ -73,33 +71,23 @@ public class LionTest {
         assertEquals("Incorrect list of food", expectedFoodList, actualFoodList);
     }
 
-    @Test
-    public void doesHaveManeSetFemaleReturnsFalse() throws Exception {
-        Lion lion = new Lion(feline, "Самка");
-        boolean expectedResult = false;
 
-        boolean actualResult = lion.doesHaveMane();
-
-        assertEquals("Incorrect result", expectedResult, actualResult);
-    }
-
-    @Test(expected = Exception.class)
+    @Test(expected = Exception.class) //проверяем, что вызов метода doesHaveMane() с некорректным полом вызывает ошибку
     public void constructorThrowsExceptionOnUnsupportedSex() throws Exception {
-
-        Lion lion = new Lion(feline, "Самочка");
-        lion.doesHaveMane();
+        Parameters parameters = new Parameters();
+        Lion lion = new Lion(feline, parameters.getINCORRECT_SEX()); //создаем объект Lion с некорректным полом
+        lion.doesHaveMane(); //вызываем метод, чтобы отловить ошибку
       }
 
-      @Test
+      @Test // проверяем текст исключения
     public void constructorExceptionTextIsCorrect() {
         Exception exception = null;
-
         try {
-            Lion lion = new Lion(feline, "Самочка");
+            Parameters parameters = new Parameters();
+            Lion lion = new Lion(feline, parameters.getINCORRECT_SEX());
         } catch (Exception ex) {
             exception = ex;
         }
-
           assertEquals("Используйте допустимые значения пола животного - самец или самка", exception.getMessage());
       }
 

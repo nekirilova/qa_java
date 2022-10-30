@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="com.example.FelineTest" time="0" errors="0" skipped="0">
+<testsuite tests="12" failures="0" name="com.example.FelineTest" time="0.007" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2022.2"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -60,8 +60,16 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.example.FelineTest" name="eatMeatReturnsPredatorList" time="0"/>
-  <testcase classname="com.example.FelineTest" name="getKittensReturnsCorrectNumberOfKittens" time="0"/>
-  <testcase classname="com.example.FelineTest" name="getFamilyReturnsCorrectValue" time="0"/>
-  <testcase classname="com.example.FelineTest" name="getKittensReturnsOneKitten" time="0"/>
+  <testcase classname="com.example.FelineTest" name="eatMeatReturnsPredatorList[0]" time="0.002"/>
+  <testcase classname="com.example.FelineTest" name="getKittensReturnsCorrectNumberOfKittens[0]" time="0.002"/>
+  <testcase classname="com.example.FelineTest" name="getFamilyReturnsCorrectValue[0]" time="0"/>
+  <testcase classname="com.example.FelineTest" name="getKittensReturnsOneKitten[0]" time="0.001"/>
+  <testcase classname="com.example.FelineTest" name="eatMeatReturnsPredatorList[1]" time="0"/>
+  <testcase classname="com.example.FelineTest" name="getKittensReturnsCorrectNumberOfKittens[1]" time="0"/>
+  <testcase classname="com.example.FelineTest" name="getFamilyReturnsCorrectValue[1]" time="0.001"/>
+  <testcase classname="com.example.FelineTest" name="getKittensReturnsOneKitten[1]" time="0"/>
+  <testcase classname="com.example.FelineTest" name="eatMeatReturnsPredatorList[2]" time="0"/>
+  <testcase classname="com.example.FelineTest" name="getKittensReturnsCorrectNumberOfKittens[2]" time="0"/>
+  <testcase classname="com.example.FelineTest" name="getFamilyReturnsCorrectValue[2]" time="0"/>
+  <testcase classname="com.example.FelineTest" name="getKittensReturnsOneKitten[2]" time="0.001"/>
 </testsuite>
