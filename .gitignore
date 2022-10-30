@@ -24,4 +24,4 @@ hs_err_pid*
 
 #Папки в target, кроме site
 /target/*
-!/target/site/jacoco/*
+
